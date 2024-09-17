@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<VaqmConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Id="abd0b959-52d7-42e1-9620-091323a1bf24" Oid="vaqm.hv.test.nast" Name="TEST: NAST oversikt" Version="2.0.0" Approved="true" CreatedByAuthor="BASI" Created="2024-09-16T16:32:17.377796" Imported="false" VersionComment="Test" BasedOnVersion="1.0.0" xmlns="http://www.dips.no/vaqmconfig">
+  <AqlBindings>
+    <AqlBinding Id="54896cdd-a239-475e-9fc8-51254c0863db" Oid="vaqm.hv.test.nast.oversikt" Name="NAST oversikt" DefaultArchetypeId="">
+      <BaseAql>SELECT c FROM COMPOSITION c</BaseAql>
+      <Paths>
+        <Path Id="ctxStartTime" IdentifierRef="c" Value="/context/start_time" DataType="DV_DATE_TIME" />
+        <Path Id="templateID" IdentifierRef="c" Value="/archetype_details/template_id" AdminDescription="" DataType="" />
+        <Path Id="nettovekt" IdentifierRef="c" Value="/content[openEHR-EHR-OBSERVATION.body_weight.v2]/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value" AdminDescription="" DataType="" />
+        <Path Id="amming" IdentifierRef="c" Value="/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value='Uspesifisert hendelse']/data[at0003]/items[at0035]/value" AdminDescription="" DataType="" />
+        <Path Id="flaskeMorsmelk" IdentifierRef="c" Value="/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value='Uspesifisert hendelse (2)']/data[at0003]/items[at0035]/value" AdminDescription="" DataType="" />
+        <Path Id="flaskeMME" IdentifierRef="c" Value="/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value='Uspesifisert hendelse (3)']/data[at0003]/items[at0035]/value" AdminDescription="" DataType="" />
+        <Path Id="maaltider" IdentifierRef="c" Value="/content[openEHR-EHR-OBSERVATION.problem_screening.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0022 and name/value='Spesifikt problem eller diagnose (4)']/items[openEHR-EHR-CLUSTER.questionnaire_details.v0]/items[at0001 and name/value='Antall måltider dette døgnet (kl 08-08)']/value" AdminDescription="" DataType="" />
+      </Paths>
+      <WhereExpressions>
+        <WhereExpression Id="templateNAST" Path="$templateID/value" Operator="EQ" Value="'NAST_HV_v*'" AdminDescription="" />
+      </WhereExpressions>
+      <OrderByExpressions>
+        <OrderByExpression Id="orderCtxStartTime" Value="$ctxStartTime/value" Ascending="false" />
+      </OrderByExpressions>
+      <Predicates>
+        <Predicate Id="templateNASTPred" WhereRef="$templateNAST" OrderByRef="$orderCtxStartTime" />
+      </Predicates>
+      <KeyValues />
+    </AqlBinding>
+  </AqlBindings>
+  <DataElements>
+    <DataElement Id="644d70b2-5011-4bb7-aa71-9ed9f73304f3" Oid="vaqm.hv.test.nast.nettovekt" Name="Nettovekt" AdminName="NAST nettovekt" Description="Beskrivelse" Categories="NAST" DisplayFormat="$templateNASTPred.nettovekt" SortFormat="" IsEditable="false" XFormat="" YFormat="" RangeFormat="">
+      <FormatExpressions />
+      <KeyValues />
+    </DataElement>
+    <DataElement Id="5cd88d4f-4d36-40c7-93ab-f53effcc1f21" Oid="vaqm.hv.test.nast.amming" Name="Amming" AdminName="NAST amming" Description="" Categories="NAST" DisplayFormat="$templateNASTPred.amming" SortFormat="" IsEditable="false" AdminDescription="" XFormat="" YFormat="" RangeFormat="">
+      <FormatExpressions />
+      <KeyValues />
+    </DataElement>
+    <DataElement Id="3d51b134-b8c8-47ee-9d66-a9a419d8360b" Oid="vaqm.hv.test.nast.flaskeMorsmelk" Name="Flaske MM / MME" AdminName="NAST flaske" Description="" Categories="NAST" DisplayFormat="$templateNASTPred.flaskeMorsmelk / $templateNASTPred.flaskeMME" SortFormat="" IsEditable="false" AdminDescription="" XFormat="" YFormat="" RangeFormat="">
+      <FormatExpressions />
+      <KeyValues />
+    </DataElement>
+    <DataElement Id="333fb369-09df-4de2-a243-5625d5de09c8" Oid="vaqm.hv.test.nast.maltider" Name="Måltider" AdminName="NAST måltider" Description="" Categories="NAST" DisplayFormat="$templateNASTPred.maaltider" SortFormat="" IsEditable="false" AdminDescription="" XFormat="" YFormat="" RangeFormat="">
+      <FormatExpressions />
+      <KeyValues />
+    </DataElement>
+  </DataElements>
+  <KeyValues />
+</VaqmConfiguration>

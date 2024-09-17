@@ -1,0 +1,13 @@
+SELECT
+   c/context/start_time AS ctxStartTime,
+   c/archetype_details/template_id AS templateID,
+   c/content[openEHR-EHR-OBSERVATION.body_weight.v2]/data[at0002]/events[at0003]/data[at0001]/items[at0004]/value AS nettovekt,
+   c/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value = 'Uspesifisert hendelse']/data[at0003]/items[at0035]/value AS amming,
+   c/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value = 'Uspesifisert hendelse (2)']/data[at0003]/items[at0035]/value AS flaskeMorsmelk,
+   c/content[openEHR-EHR-OBSERVATION.fluid_input.v1]/data[at0001]/events[at0002 and name/value = 'Uspesifisert hendelse (3)']/data[at0003]/items[at0035]/value AS flaskeMME,
+   c/content[openEHR-EHR-OBSERVATION.problem_screening.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0022 and name/value = 'Spesifikt problem eller diagnose (4)']/items[openEHR-EHR-CLUSTER.questionnaire_details.v0]/items[at0001 and name/value = 'Antall måltider dette døgnet (kl 08-08)']/value AS maaltider
+FROM
+   COMPOSITION c
+WHERE
+   templateID/value = 'NAST HV v1.0'
+ORDER BY ctxStartTime DESC

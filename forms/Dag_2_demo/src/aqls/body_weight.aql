@@ -1,0 +1,7 @@
+SELECT
+   o
+FROM
+   COMPOSITION c
+      CONTAINS OBSERVATION o[openEHR-EHR-OBSERVATION.body_weight.v2]
+ORDER BY c/context/start_time DESC
+LIMIT 1

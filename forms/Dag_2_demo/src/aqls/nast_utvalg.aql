@@ -1,0 +1,7 @@
+SELECT
+   a/context/start_time
+FROM
+   COMPOSITION a
+WHERE
+   a/archetype_details/template_id/value = 'NAST_HV_v*'
+ORDER BY a/context/start_time DESC

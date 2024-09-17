@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<composition p1:type="COMPOSITION" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" archetype_node_id="openEHR-EHR-COMPOSITION.self_reported_data.v1" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openehr.org/v1">
+	<name>
+		<value>NAST HV v1.0</value>
+	</name>
+	<uid xsi:type="OBJECT_VERSION_ID">
+		<value>4bde3493-c026-48f9-aa93-fb7683a83085::default::1</value>
+	</uid>
+	<archetype_details>
+		<archetype_id>
+			<value>openEHR-EHR-COMPOSITION.self_reported_data.v1</value>
+		</archetype_id>
+		<template_id>
+			<value>NAST HV v1.0</value>
+		</template_id>
+		<rm_version>1.0.4</rm_version>
+	</archetype_details>
+	<language>
+		<terminology_id>
+			<value>openehr</value>
+		</terminology_id>
+		<code_string>nb</code_string>
+	</language>
+	<territory>
+		<terminology_id>
+			<value>openehr</value>
+		</terminology_id>
+		<code_string>nb</code_string>
+	</territory>
+	<category>
+		<value/>
+		<defining_code>
+			<terminology_id>
+				<value>openehr</value>
+			</terminology_id>
+			<code_string>433</code_string>
+		</defining_code>
+	</category>
+	<composer xsi:type="PARTY_SELF"/>
+	<context>
+		<start_time>
+			<value>2024-09-17T08:59:54.0926505+02:00</value>
+		</start_time>
+		<setting>
+			<value>home</value>
+			<defining_code>
+				<terminology_id>
+					<value>openehr</value>
+				</terminology_id>
+				<code_string>225</code_string>
+			</defining_code>
+		</setting>
+		<other_context xsi:type="ITEM_TREE" archetype_node_id="at0003">
+			<name>
+				<value>Item tree</value>
+			</name>
+			<items xsi:type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.person.v1">
+				<name>
+					<value>Person</value>
+				</name>
+				<archetype_details>
+					<archetype_id>
+						<value>openEHR-EHR-CLUSTER.person.v1</value>
+					</archetype_id>
+					<template_id>
+						<value>NAST HV v1.0</value>
+					</template_id>
+					<rm_version>1.0.4</rm_version>
+				</archetype_details>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Identifikator</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>14019800513</value>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0001">
+					<name>
+						<value>Navn</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>Folke (Kith) Danser</value>
+					</value>
+				</items>
+			</items>
+			<items xsi:type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.fylle_ut_pa_vegne_av_helsenorge_hv.v1">
+				<name>
+					<value>fylle_ut_pa_vegne_av_helsenorge_hv</value>
+				</name>
+				<archetype_details>
+					<archetype_id>
+						<value>openEHR-EHR-CLUSTER.fylle_ut_pa_vegne_av_helsenorge_hv.v1</value>
+					</archetype_id>
+					<template_id>
+						<value>NAST HV v1.0</value>
+					</template_id>
+					<rm_version>1.0.4</rm_version>
+				</archetype_details>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Om det er på vegne av eller ei. True er på vegne av</value>
+					</name>
+					<value xsi:type="DV_BOOLEAN">
+						<value>true</value>
+					</value>
+				</items>
+			</items>
+		</other_context>
+	</context>
+	<content xsi:type="OBSERVATION" archetype_node_id="openEHR-EHR-OBSERVATION.body_weight.v2">
+		<name>
+			<value>Kroppsvekt</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-OBSERVATION.body_weight.v2</value>
+			</archetype_id>
+			<template_id>
+				<value>NAST HV v1.0</value>
+			</template_id>
+			<rm_version>1.0.4</rm_version>
+		</archetype_details>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>nb</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="PARTY_SELF"/>
+		<data archetype_node_id="at0002">
+			<name>
+				<value>history</value>
+			</name>
+			<origin>
+				<value>2024-09-17T08:59:54.0926505+02:00</value>
+			</origin>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0003">
+				<name>
+					<value>Uspesifisert hendelse</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+					<name>
+						<value>Simple</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0004">
+						<name>
+							<value>Kroppsvekt</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>2965</magnitude>
+							<units>g</units>
+						</value>
+					</items>
+				</data>
+				<state xsi:type="ITEM_TREE" archetype_node_id="at0008">
+					<name>
+						<value>state structure</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0009">
+						<name>
+							<value>Påkledning</value>
+						</name>
+						<value xsi:type="DV_CODED_TEXT">
+							<value>Naken</value>
+							<defining_code>
+								<terminology_id>
+									<value>local</value>
+								</terminology_id>
+								<code_string>at0013</code_string>
+							</defining_code>
+						</value>
+					</items>
+				</state>
+			</events>
+		</data>
+	</content>
+	<content xsi:type="OBSERVATION" archetype_node_id="openEHR-EHR-OBSERVATION.fluid_input.v1">
+		<name>
+			<value>Væskeinntak</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-OBSERVATION.fluid_input.v1</value>
+			</archetype_id>
+			<template_id>
+				<value>NAST HV v1.0</value>
+			</template_id>
+			<rm_version>1.0.4</rm_version>
+		</archetype_details>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>nb</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="PARTY_SELF"/>
+		<data archetype_node_id="at0001">
+			<name>
+				<value>Event Series</value>
+			</name>
+			<origin>
+				<value>2024-09-17T08:59:54.0926505+02:00</value>
+			</origin>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>List</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0035">
+						<name>
+							<value>Mengde</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>0</magnitude>
+							<units>ml</units>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0036">
+						<name>
+							<value>Navn på væsken</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Morsmelk</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0034">
+						<name>
+							<value>Administrasjonsvei</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Amming</value>
+						</value>
+					</items>
+				</data>
+			</events>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse (2)</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>List</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0035">
+						<name>
+							<value>Mengde</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>0</magnitude>
+							<units>ml</units>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0036">
+						<name>
+							<value>Navn på væsken</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Morsmelk</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0034">
+						<name>
+							<value>Administrasjonsvei</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Flaske</value>
+						</value>
+					</items>
+				</data>
+			</events>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse (3)</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>List</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0035">
+						<name>
+							<value>Mengde</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>298</magnitude>
+							<units>ml</units>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0036">
+						<name>
+							<value>Navn på væsken</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Morsmelkerstatning</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0034">
+						<name>
+							<value>Administrasjonsvei</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Flaske</value>
+						</value>
+					</items>
+				</data>
+			</events>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse (4)</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>List</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0035">
+						<name>
+							<value>Mengde</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>0</magnitude>
+							<units>ml</units>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0036">
+						<name>
+							<value>Navn på væsken</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Morsmelk</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0034">
+						<name>
+							<value>Administrasjonsvei</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Sonde</value>
+						</value>
+					</items>
+				</data>
+			</events>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse (5)</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>List</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0035">
+						<name>
+							<value>Mengde</value>
+						</name>
+						<value xsi:type="DV_QUANTITY">
+							<magnitude>398</magnitude>
+							<units>ml</units>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0036">
+						<name>
+							<value>Navn på væsken</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Morsmelkerstatning</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0034">
+						<name>
+							<value>Administrasjonsvei</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value>Sonde</value>
+						</value>
+					</items>
+				</data>
+			</events>
+		</data>
+	</content>
+	<content xsi:type="OBSERVATION" archetype_node_id="openEHR-EHR-OBSERVATION.problem_screening.v1">
+		<name>
+			<value>Kartleggingsspørsmål om problemer eller diagnoser</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-OBSERVATION.problem_screening.v1</value>
+			</archetype_id>
+			<template_id>
+				<value>NAST HV v1.0</value>
+			</template_id>
+			<rm_version>1.0.4</rm_version>
+		</archetype_details>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>nb</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="PARTY_SELF"/>
+		<data archetype_node_id="at0001">
+			<name>
+				<value>History</value>
+			</name>
+			<origin>
+				<value>2024-09-17T08:59:54.0926505+02:00</value>
+			</origin>
+			<events xsi:type="POINT_EVENT" archetype_node_id="at0002">
+				<name>
+					<value>Uspesifisert hendelse</value>
+				</name>
+				<time>
+					<value>2024-09-17T08:59:54.0926505+02:00</value>
+				</time>
+				<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+					<name>
+						<value>Tree</value>
+					</name>
+					<items xsi:type="CLUSTER" archetype_node_id="at0022">
+						<name>
+							<value>Spesifikt problem eller diagnose</value>
+						</name>
+						<items xsi:type="ELEMENT" archetype_node_id="at0005">
+							<name>
+								<value>Gulper barnet mer enn tidligere?</value>
+							</name>
+							<value xsi:type="DV_CODED_TEXT">
+								<value>Nei</value>
+								<defining_code>
+									<terminology_id>
+										<value>local</value>
+									</terminology_id>
+									<code_string>at0024</code_string>
+								</defining_code>
+							</value>
+						</items>
+						<items xsi:type="ELEMENT" archetype_node_id="at0004">
+							<name>
+								<value>Problem/diagnosenavn</value>
+							</name>
+							<value xsi:type="DV_TEXT">
+								<value>Gulping</value>
+							</value>
+						</items>
+					</items>
+					<items xsi:type="CLUSTER" archetype_node_id="at0022">
+						<name>
+							<value>Spesifikt problem eller diagnose (2)</value>
+						</name>
+						<items xsi:type="ELEMENT" archetype_node_id="at0005">
+							<name>
+								<value>Har barnet færre våte bleier?</value>
+							</name>
+							<value xsi:type="DV_CODED_TEXT">
+								<value>Ja</value>
+								<defining_code>
+									<terminology_id>
+										<value>local</value>
+									</terminology_id>
+									<code_string>at0023</code_string>
+								</defining_code>
+							</value>
+						</items>
+						<items xsi:type="ELEMENT" archetype_node_id="at0004">
+							<name>
+								<value>Problem/diagnosenavn</value>
+							</name>
+							<value xsi:type="DV_TEXT">
+								<value>Redusert urinproduksjon</value>
+							</value>
+						</items>
+					</items>
+					<items xsi:type="CLUSTER" archetype_node_id="at0022">
+						<name>
+							<value>Spesifikt problem eller diagnose (3)</value>
+						</name>
+						<items xsi:type="ELEMENT" archetype_node_id="at0005">
+							<name>
+								<value>Har barnet normal avføring?</value>
+							</name>
+							<value xsi:type="DV_CODED_TEXT">
+								<value>Ja</value>
+								<defining_code>
+									<terminology_id>
+										<value>local</value>
+									</terminology_id>
+									<code_string>at0023</code_string>
+								</defining_code>
+							</value>
+						</items>
+						<items xsi:type="ELEMENT" archetype_node_id="at0004">
+							<name>
+								<value>Problem/diagnosenavn</value>
+							</name>
+							<value xsi:type="DV_TEXT">
+								<value>Avvikende avføring</value>
+							</value>
+						</items>
+					</items>
+					<items xsi:type="CLUSTER" archetype_node_id="at0022">
+						<name>
+							<value>Spesifikt problem eller diagnose (4)</value>
+						</name>
+						<items xsi:type="ELEMENT" archetype_node_id="at0004">
+							<name>
+								<value>Problem/diagnosenavn</value>
+							</name>
+							<value xsi:type="DV_TEXT">
+								<value>Antall måltider</value>
+							</value>
+						</items>
+						<items xsi:type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.questionnaire_details.v0">
+							<name>
+								<value>Spørreskjemadetaljer</value>
+							</name>
+							<archetype_details>
+								<archetype_id>
+									<value>openEHR-EHR-CLUSTER.questionnaire_details.v0</value>
+								</archetype_id>
+								<template_id>
+									<value>NAST HV v1.0</value>
+								</template_id>
+								<rm_version>1.0.4</rm_version>
+							</archetype_details>
+							<items xsi:type="ELEMENT" archetype_node_id="at0001">
+								<name>
+									<value>Antall måltider dette døgnet (kl 08-08)</value>
+								</name>
+								<value xsi:type="DV_COUNT">
+									<magnitude>7</magnitude>
+								</value>
+							</items>
+						</items>
+					</items>
+				</data>
+			</events>
+		</data>
+	</content>
+	<content xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.selvrapporterte_data_egenerklaering.v1">
+		<name>
+			<value>selvrapporterte_data_egenerklaering</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-EVALUATION.selvrapporterte_data_egenerklaering.v1</value>
+			</archetype_id>
+			<template_id>
+				<value>NAST HV v1.0</value>
+			</template_id>
+			<rm_version>1.0.4</rm_version>
+		</archetype_details>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>nb</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="PARTY_SELF"/>
+		<data xsi:type="ITEM_TREE" archetype_node_id="at0003">
+			<name>
+				<value>Item tree</value>
+			</name>
+			<items xsi:type="ELEMENT" archetype_node_id="at0004">
+				<name>
+					<value>Pasientskjema egenerklæring</value>
+				</name>
+				<value xsi:type="DV_TEXT">
+					<value>Sjekkliste NAST</value>
+				</value>
+			</items>
+			<items xsi:type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.selvrapportert_eventuelle_kommentarer_hv.v1">
+				<name>
+					<value>selvrapportert_eventuelle_kommentarer_hv</value>
+				</name>
+				<archetype_details>
+					<archetype_id>
+						<value>openEHR-EHR-CLUSTER.selvrapportert_eventuelle_kommentarer_hv.v1</value>
+					</archetype_id>
+					<template_id>
+						<value>NAST HV v1.0</value>
+					</template_id>
+					<rm_version>1.0.4</rm_version>
+				</archetype_details>
+				<items xsi:type="ELEMENT" archetype_node_id="at0001">
+					<name>
+						<value>Er det noe mer du vil fortelle oss?</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>Mye urolig ved mating via sonden.</value>
+					</value>
+				</items>
+			</items>
+		</data>
+	</content>
+</composition>
+
